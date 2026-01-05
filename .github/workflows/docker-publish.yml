@@ -33,7 +33,7 @@ jobs:
           images: shareven/asus-rebooter
           tags: |
             type=semver,pattern={{version}}
-            type=raw,value=latest
+            type=raw,value=latest,enable=${{ !contains(github.ref, '-') }}
           flavor: |
             latest=false
 
